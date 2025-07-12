@@ -1,204 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BdMSO 2025 - Bangladesh Mathematics & Science Olympiad</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-white text-gray-800 font-sans">
 
   <!-- Header -->
-  <header class="bg-white-100 text-black font-bold shadow-md">
-    <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
+  <header class="bg-white/90 text-black font-bold shadow-md sticky top-0 z-50 backdrop-blur-md transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center relative">
       <img src="bdmso_logo.png" class="w-24">
-      <!-- <h1 class="text-xl font-bold">BdMSO 2025</h1> -->
-      <nav class="space-x-4 hidden md:block">
-        <a href="#about" class="hover:underline">About</a>
-        <a href="#timeline" class="hover:underline">Timeline</a>
-        <a href="#syllabus" class="hover:underline">Syllabus</a>
-        <a href="#contact" class="hover:underline">Contact</a>
+      <!-- Hamburger for mobile -->
+      <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg hover:bg-blue-100 transition focus:outline-none" aria-label="Open menu">
+        <span class="block w-6 h-0.5 bg-blue-700 mb-1"></span>
+        <span class="block w-6 h-0.5 bg-blue-700 mb-1"></span>
+        <span class="block w-6 h-0.5 bg-blue-700"></span>
+      </button>
+      <!-- Nav links (desktop) -->
+      <nav id="main-nav" class="hidden md:flex space-x-2 md:space-x-4 items-center">
+        <a href="#about" class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">About</a>
+        <a href="#timeline" class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Timeline</a>
+        <a href="#syllabus" class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Syllabus</a>
+        <a href="#contact" class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Contact</a>
       </nav>
-      <a href="https://festive.rocks/event/view/d603fc9b-4250-483a-8aa2-2bbb1cc047e4" class="bg-yellow-400 text-black px-4 py-2 rounded font-semibold hover:bg-yellow-300">Register Now</a>
+      <a href="https://festive.rocks/event/view/d603fc9b-4250-483a-8aa2-2bbb1cc047e4" class="bg-yellow-400 text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-300 shadow transition ml-2">Register Now</a>
+      <!-- Mobile menu dropdown -->
+      <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg rounded-b-xl py-4 px-6 space-y-2 hidden">
+        <a href="#about" class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">About</a>
+        <a href="#timeline" class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Timeline</a>
+        <a href="#syllabus" class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Syllabus</a>
+        <a href="#contact" class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Contact</a>
+      </div>
     </div>
   </header>
+  <script>
+    // Responsive menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    // Optional: Close menu on link click (mobile)
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
 
   <!-- Hero Section -->
-  <section class=" bg-blue-200 py-12 px-4 text-center">
-    <h2 class="text-4xl font-bold mb-4">Bangladesh Mathematics and Science Olympiad 2025</h2>
-    <p class="text-lg mb-6 max-w-2xl mx-auto"> BdMSO serves as the official qualifying round to select Bangladesh's primary school students for international representation.</p>
-    <div class="space-x-4">
-      <a href="https://festive.rocks/event/view/d603fc9b-4250-483a-8aa2-2bbb1cc047e4" class="bg-blue-700 text-white px-6 py-3 rounded hover:bg-blue-800">Register Now</a>
-      <a href="#syllabus" class="bg-white border border-blue-700 text-blue-700 px-6 py-3 rounded hover:bg-blue-50">View Syllabus</a>
+  <section
+    class="relative bg-gradient-to-br from-blue-300 via-blue-100 to-green-100 py-24 px-4 text-center shadow-lg rounded-b-3xl mb-8 overflow-hidden flex flex-col items-center justify-center">
+    <!-- Animated Science SVG Background -->
+    <div class="absolute inset-0 pointer-events-none z-0">
+      <svg width="100%" height="100%" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg"
+        class="absolute top-0 left-0 w-full h-full opacity-30 animate-pulse">
+        <circle cx="200" cy="120" r="80" fill="#38bdf8" fill-opacity="0.2" />
+        <circle cx="1240" cy="200" r="100" fill="#22d3ee" fill-opacity="0.15" />
+        <ellipse cx="720" cy="180" rx="180" ry="60" fill="#4ade80" fill-opacity="0.13" />
+        <g class="animate-spin-slow" style="transform-origin: 720px 180px;">
+          <ellipse cx="720" cy="180" rx="120" ry="40" stroke="#0ea5e9" stroke-width="2" fill="none" />
+        </g>
+      </svg>
     </div>
+    <div class="relative z-10">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-blue-700 drop-shadow-lg tracking-tight">Bangladesh
+        Mathematics and Science Olympiad 2025</h2>
+      <p class="text-xl md:text-xl mb-10 max-w-2xl mx-auto text-gray-700 font-medium">BdMSO serves as the official
+        qualifying round to select Bangladesh's primary school students for international representation.</p>
+      <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+        <a href="https://festive.rocks/event/view/d603fc9b-4250-483a-8aa2-2bbb1cc047e4"
+          class="bg-yellow-400 text-black px-10 py-4 rounded-xl font-bold shadow hover:bg-yellow-300 transition text-lg flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="#fff" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l2.5 2.5" />
+          </svg>
+          Register Now
+        </a>
+        <a href="#syllabus"
+          class="bg-white border-2 border-blue-700 text-blue-700 px-10 py-4 rounded-xl font-bold shadow hover:bg-blue-50 transition text-lg flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 6v12m0-12c-2.21 0-4 1.79-4 4v8c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V10c0-2.21-1.79-4-4-4zm0 0c2.21 0 4 1.79 4 4v8c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V10c0-2.21 1.79-4 4-4z" />
+          </svg>
+          View Syllabus
+        </a>
+      </div>
+    </div>
+    <!-- Science-themed floating icons -->
+    <div class="absolute left-8 top-8 z-10 animate-bounce-slow">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-400 opacity-70" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor">
+        <circle cx="12" cy="12" r="2.5" fill="currentColor" />
+        <ellipse cx="12" cy="12" rx="8" ry="3.5" stroke="currentColor" stroke-width="1.5" fill="none" />
+        <ellipse cx="12" cy="12" rx="3.5" ry="8" stroke="currentColor" stroke-width="1.5" fill="none"
+          transform="rotate(60 12 12)" />
+        <ellipse cx="12" cy="12" rx="3.5" ry="8" stroke="currentColor" stroke-width="1.5" fill="none"
+          transform="rotate(-60 12 12)" />
+      </svg>
+    </div>
+    <div class="absolute right-8 bottom-8 z-10 animate-bounce-slow">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-400 opacity-70" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <rect x="4" y="5" width="16" height="14" rx="2" stroke="currentColor" stroke-width="2" fill="none" />
+        <circle cx="8" cy="9" r="1.5" fill="currentColor" />
+        <circle cx="12" cy="9" r="1.5" fill="currentColor" />
+        <circle cx="16" cy="9" r="1.5" fill="currentColor" />
+        <circle cx="8" cy="15" r="1.5" fill="currentColor" />
+        <circle cx="12" cy="15" r="1.5" fill="currentColor" />
+        <circle cx="16" cy="15" r="1.5" fill="currentColor" />
+        <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.5" />
+      </svg>
+    </div>
+    <style>
+      @keyframes bounce-slow {
+
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      .animate-bounce-slow {
+        animation: bounce-slow 3s infinite;
+      }
+
+      @keyframes spin-slow {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .animate-spin-slow {
+        animation: spin-slow 12s linear infinite;
+      }
+    </style>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="max-w-5xl mx-auto py-12 px-4">
-    <h3 class="text-3xl font-semibold mb-4 text-center">About BdMSO</h3>
-    <p class="mb-4 text-justify">Bangladesh Mathematics and Science Olympiad (BdMSO) for Primary Students is an initiative jointly launched by the Bangladesh Open Source Network (BdOSN) and Society for the Popularization of Science, Bangladesh (SPSB). This Olympiad is designed to introduce primary school students to the world of mathematics and science from an early age, nurturing their natural curiosity and problem-solving skills. BdMSO serves as the official qualifying round to select Bangladesh's primary school students for international representation. The competition will ultimately choose a national team of six students for Mathematics and six for science. These twelve individuals will then have the opportunity to represent Bangladesh at the 22nd International Mathematics and Science Olympiad (IMSO) in Kedah, Malaysia, this October.</p>
+  <section id="about"
+    class="max-w-5xl mx-auto py-16 px-6 bg-white/90 rounded-2xl shadow-xl mb-12 relative overflow-hidden flex flex-col items-center">
+    <!-- Decorative Science SVGs -->
+    <div class="absolute left-0 top-0 z-0 opacity-10">
+      <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+        <circle cx="60" cy="60" r="50" stroke="#38bdf8" stroke-width="6" fill="none" />
+        <ellipse cx="60" cy="60" rx="40" ry="16" stroke="#22d3ee" stroke-width="3" fill="none" />
+        <ellipse cx="60" cy="60" rx="16" ry="40" stroke="#4ade80" stroke-width="3" fill="none" />
+      </svg>
+    </div>
+    <div class="absolute right-0 bottom-0 z-0 opacity-10">
+      <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+        <rect x="20" y="30" width="80" height="60" rx="12" stroke="#0ea5e9" stroke-width="6" fill="none" />
+        <circle cx="40" cy="50" r="8" fill="#38bdf8" />
+        <circle cx="80" cy="70" r="8" fill="#4ade80" />
+      </svg>
+    </div>
+    <div class="relative z-10 w-full">
+      <h3 class="text-4xl font-bold mb-6 text-center text-blue-800 tracking-tight drop-shadow">About BdMSO</h3>
+      <p class="mb-6 text-lg md:text-lg text-justify text-gray-800 leading-relaxed font-medium max-w-3xl mx-auto">
+        <span class="inline-block align-middle mr-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-green-500 inline" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <circle cx="12" cy="12" r="2.5" fill="currentColor" />
+            <ellipse cx="12" cy="12" rx="8" ry="3.5" stroke="currentColor" stroke-width="1.5" fill="none" />
+            <ellipse cx="12" cy="12" rx="3.5" ry="8" stroke="currentColor" stroke-width="1.5" fill="none"
+              transform="rotate(60 12 12)" />
+            <ellipse cx="12" cy="12" rx="3.5" ry="8" stroke="currentColor" stroke-width="1.5" fill="none"
+              transform="rotate(-60 12 12)" />
+          </svg>
+        </span>
+        Bangladesh Mathematics and Science Olympiad (BdMSO) for Primary Students is an initiative jointly launched by
+        the Bangladesh Open Source Network (BdOSN) and Society for the Popularization of Science, Bangladesh (SPSB).
+        This Olympiad is designed to introduce primary school students to the world of mathematics and science from an
+        early age, nurturing their natural curiosity and problem-solving skills.
+        BdMSO serves as the official qualifying round to select Bangladesh's primary school students for international
+        representation.
+        The competition will ultimately choose a national team of six students for Mathematics and six for Science.
+        These twelve individuals will then have the opportunity to represent Bangladesh at the 22nd International
+        Mathematics and Science Olympiad (IMSO) in Kedah, Malaysia, this October.
+      </p>
+
+    </div>
   </section>
 
-
-
   <!-- Timeline (Vertical View) -->
-
-<section id="timeline" class="bg-gray-100 py-16 px-4">
-  <div class="max-w-6xl mx-auto">
-    <h3 class="text-3xl font-semibold text-center mb-16">Key Dates</h3>
-
-    <div class="relative grid grid-cols-9 gap-y-6">
-      <!-- vertical center line -->
-      <div class="col-span-9 absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-blue-600"></div>
-
-      <!-- Event 1 (left) -->
-      <div class="col-span-4 text-right pr-1">
-        <h4 class="text-xl font-bold text-blue-800">July 12–31, 2025</h4>
-        <p class="text-gray-700">Online Registration <br> Activation Campaign</p>
+  <section id="timeline"
+    class="bg-gradient-to-br from-blue-50 via-white to-yellow-50 py-16 px-4 rounded-2xl shadow-lg mb-8">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-semibold text-center mb-16 text-blue-800">Key Dates</h3>
+      <div class="relative grid grid-cols-9 gap-y-10">
+        <!-- vertical center line -->
+        <div class="col-span-9 absolute left-1/2 transform -translate-x-1/2 h-full border-l-4 border-blue-400"></div>
+        <!-- Event 1 (left) -->
+        <div class="col-span-4 text-right pr-4 flex flex-col items-end">
+          <div class="bg-white rounded-xl shadow p-4 w-full max-w-xs">
+            <div class="flex items-center justify-end mb-2"><span
+                class="inline-block w-4 h-4 bg-blue-400 rounded-full mr-2"></span>
+              <h4 class="text-lg font-bold text-blue-800">July 12–31, 2025</h4>
+            </div>
+            <p class="text-gray-700">Online Registration <br> Activation Campaign</p>
+          </div>
+        </div>
+        <div class="col-span-1 flex justify-center items-center"><span
+            class="w-5 h-5 bg-blue-400 border-4 border-white rounded-full z-10"></span></div>
+        <div class="col-span-4"></div>
+        <!-- Event 2 (right) -->
+        <div class="col-span-4"></div>
+        <div class="col-span-1 flex justify-center items-center"><span
+            class="w-5 h-5 bg-yellow-400 border-4 border-white rounded-full z-10"></span></div>
+        <div class="col-span-4 text-left pl-4 flex flex-col items-start">
+          <div class="bg-white rounded-xl shadow p-4 w-full max-w-xs">
+            <div class="flex items-center mb-2">
+              <h4 class="text-lg font-bold text-blue-800">August 9, 2025</h4><span
+                class="inline-block w-4 h-4 bg-yellow-400 rounded-full ml-2"></span>
+            </div>
+            <p class="text-gray-700">BdMSO National Round</p>
+          </div>
+        </div>
+        <!-- Event 3 (left) -->
+        <div class="col-span-4 text-right pr-4 flex flex-col items-end">
+          <div class="bg-white rounded-xl shadow p-4 w-full max-w-xs">
+            <div class="flex items-center justify-end mb-2"><span
+                class="inline-block w-4 h-4 bg-green-400 rounded-full mr-2"></span>
+              <h4 class="text-lg font-bold text-blue-800">August 12–14, 2025</h4>
+            </div>
+            <p class="text-gray-700">BdMSO National Camp</p>
+          </div>
+        </div>
+        <div class="col-span-1 flex justify-center items-center"><span
+            class="w-5 h-5 bg-green-400 border-4 border-white rounded-full z-10"></span></div>
+        <div class="col-span-4"></div>
+        <!-- Event 4 (right) -->
+        <div class="col-span-4"></div>
+        <div class="col-span-1 flex justify-center items-center"><span
+            class="w-5 h-5 bg-pink-400 border-4 border-white rounded-full z-10"></span></div>
+        <div class="col-span-4 text-left pl-4 flex flex-col items-start">
+          <div class="bg-white rounded-xl shadow p-4 w-full max-w-xs">
+            <div class="flex items-center mb-2">
+              <h4 class="text-lg font-bold text-blue-800">August 19, 2025</h4><span
+                class="inline-block w-4 h-4 bg-pink-400 rounded-full ml-2"></span>
+            </div>
+            <p class="text-gray-700">Team Selection Test</p>
+          </div>
+        </div>
+        <!-- Event 5 (left) -->
+        <div class="col-span-4 text-right pr-4 flex flex-col items-end">
+          <div class="bg-white rounded-xl shadow p-4 w-full max-w-xs">
+            <div class="flex items-center justify-end mb-2"><span
+                class="inline-block w-4 h-4 bg-purple-400 rounded-full mr-2"></span>
+              <h4 class="text-lg font-bold text-blue-800">September 1–30, 2025</h4>
+            </div>
+            <p class="text-gray-700">IMSO Preparation Camp</p>
+          </div>
+        </div>
+        <div class="col-span-1 flex justify-center items-center"><span
+            class="w-5 h-5 bg-purple-400 border-4 border-white rounded-full z-10"></span></div>
+        <div class="col-span-4"></div>
+        <!-- Event 6 (right) -->
+        <div class="col-span-4"></div>
+        <div class="col-span-1 flex justify-center items-center"><span
+            class="w-5 h-5 bg-orange-400 border-4 border-white rounded-full z-10"></span></div>
+        <div class="col-span-4 text-left pl-4 flex flex-col items-start">
+          <div class="bg-white rounded-xl shadow p-4 w-full max-w-xs">
+            <div class="flex items-center mb-2">
+              <h4 class="text-lg font-bold text-blue-800">October 1, 2025</h4><span
+                class="inline-block w-4 h-4 bg-orange-400 rounded-full ml-2"></span>
+            </div>
+            <p class="text-gray-700">Press Conference</p>
+          </div>
+        </div>
+        <!-- Event 7 (left) -->
+        <div class="col-span-4 text-right pr-4 flex flex-col items-end">
+          <div class="bg-white rounded-xl shadow p-4 w-full max-w-xs">
+            <div class="flex items-center justify-end mb-2"><span
+                class="inline-block w-4 h-4 bg-blue-900 rounded-full mr-2"></span>
+              <h4 class="text-lg font-bold text-blue-800">October 4–10, 2025</h4>
+            </div>
+            <p class="text-gray-700">22nd IMSO in Kedah, Malaysia</p>
+          </div>
+        </div>
+        <div class="col-span-1 flex justify-center items-center"><span
+            class="w-5 h-5 bg-blue-900 border-4 border-white rounded-full z-10"></span></div>
+        <div class="col-span-4"></div>
       </div>
-      <div class="col-span-1"></div>
-      <div class="col-span-4"></div>
-
-      <!-- Event 2 (right) -->
-      <div class="col-span-4"></div>
-      <div class="col-span-1"></div>
-      <div class="col-span-4 text-left pl-1">
-        <h4 class="text-xl font-bold text-blue-800">August 9, 2025</h4>
-        <p class="text-gray-700">BdMSO National Round</p>
-      </div>
-
-      <!-- Event 3 (left) -->
-      <div class="col-span-4 text-right pr-1">
-        <h4 class="text-xl font-bold text-blue-800">August 12–14, 2025</h4>
-        <p class="text-gray-700">BdMSO National Camp</p>
-      </div>
-      <div class="col-span-1"></div>
-      <div class="col-span-4"></div>
-
-      <!-- Event 4 (right) -->
-      <div class="col-span-4"></div>
-      <div class="col-span-1"></div>
-      <div class="col-span-4 text-left pl-1">
-        <h4 class="text-xl font-bold text-blue-800">August 19, 2025</h4>
-        <p class="text-gray-700">Team Selection Test</p>
-      </div>
-
-      <!-- Event 5 (left) -->
-      <div class="col-span-4 text-right pr-61">
-        <h4 class="text-xl font-bold text-blue-800">September 1–30, 2025</h4>
-        <p class="text-gray-700">IMSO Preparation Camp</p>
-      </div>
-      <div class="col-span-1"></div>
-      <div class="col-span-4"></div>
-
-      <!-- Event 6 (right) -->
-      <div class="col-span-4"></div>
-      <div class="col-span-1"></div>
-      <div class="col-span-4 text-left pl-1">
-        <h4 class="text-xl font-bold text-blue-800">October 1, 2025</h4>
-        <p class="text-gray-700">Press Conference</p>
-      </div>
-
-      <!-- Event 7 (left) -->
-      <div class="col-span-4 text-right pr-1">
-        <h4 class="text-xl font-bold text-blue-800">October 4–10, 2025</h4>
-        <p class="text-gray-700">22nd IMSO in Kedah, Malaysia</p>
-      </div>
-      <div class="col-span-1"></div>
-      <div class="col-span-4"></div>
     </div>
-  </div>
-</section>
-
-
-
-
+  </section>
 
   <!-- Registration -->
-  <section id="registration" class="max-w-5xl mx-auto py-12 px-4">
-    <h3 class="text-3xl font-semibold text-center mb-8">Participation Criteria</h3>
-    <p class="mb-4">BdMSO is open to primary/elementary school students across Bangladesh who are under the age of 13.
-</p>
-    <ul class="list-disc list-inside mb-4">
-      <li>The participants of the Olympiad must be primary school students as of July 1st, 2025.</li>
-      <li>Birth Date should be on or after October 6, 2012</li>
-    </ul>
+  <section id="registration"
+    class="max-w-5xl mx-auto py-16 px-6 bg-white/90 rounded-2xl shadow-xl mb-12 relative overflow-hidden flex flex-col items-center">
+    <!-- Decorative SVGs -->
+    <div class="absolute left-0 top-0 z-0 opacity-10">
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+        <rect x="15" y="25" width="70" height="50" rx="10" stroke="#0ea5e9" stroke-width="5" fill="none" />
+        <circle cx="35" cy="45" r="7" fill="#38bdf8" />
+        <circle cx="65" cy="65" r="7" fill="#4ade80" />
+      </svg>
+    </div>
+    <div class="absolute right-0 bottom-0 z-0 opacity-10">
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="40" stroke="#38bdf8" stroke-width="5" fill="none" />
+        <ellipse cx="50" cy="50" rx="32" ry="12" stroke="#22d3ee" stroke-width="2" fill="none" />
+      </svg>
+    </div>
+    <div class="relative z-10 w-full">
+      <h3 class="text-4xl font-bold text-center mb-8 text-blue-800 tracking-tight drop-shadow">Participation Criteria
+      </h3>
+      <div>
+        <p class="mb-4 text-lg md:text-xl text-center text-gray-800 font-medium">BdMSO is open to primary/elementary
+          school students across Bangladesh who are under the age of 13.</p>
+        <ul class="list-disc list-inside text-lg text-gray-700 text-left pl-6">
+          <li>The participants of the Olympiad must be primary school students as of July 1st, 2025.</li>
+          <li>Birth Date should be on or after October 6, 2012</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <!-- Syllabus -->
-  <section id="syllabus" class="bg-gray-100 py-12 px-4">
-  <div class="max-w-5xl mx-auto">
-    <h3 class="text-3xl font-semibold text-center mb-6">Syllabus Overview</h3>
-    <div class="grid md:grid-cols-5 gap-4">
-      <div class="col-span-2 border p-2">
-        <h4 class="text-xl font-bold text-center mb-2">Mathematics</h4>
-        <ul class="list-disc list-inside text-sm">
-          <!-- <li>Arithmetic</li>
-          <li>Geometry</li>
-          <li>Data and Measurement</li>
-          <li>Counting Techniques</li>
-          <li>Recreational Mathematics</li> -->
-
-          <li>Whole & rational numbers </li>
-          <li>Pattern recognition</li>
-          <li>Factors and multiples, GCD, LCM and Mode</li>
-          <li>Ordering of numbers, ratio and proportion</li>
-          <li>Properties of polygons</li>
-          <li>Angles and their measurement</li>
-          <li>Area and perimeter of polygons</li>
-          <li>Symmetry, reflection, rotation, proportion</li>
-          <li>Nets of cube and parallelepiped </li>
-          <li>Data representation, interpretation</li>
-        </ul>
+  <section id="syllabus"
+    class="bg-gradient-to-br from-blue-50 via-white to-yellow-50 py-16 px-4 rounded-2xl shadow-lg mb-8">
+    <div class="max-w-5xl mx-auto">
+      <h3 class="text-4xl font-bold text-center mb-10 text-blue-800 tracking-tight drop-shadow">Syllabus Overview</h3>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Mathematics Card -->
+        <div
+          class="bg-white/90 border-2 border-blue-200 rounded-2xl shadow-lg p-8 flex flex-col items-center hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+          <div class="bg-blue-100 rounded-full p-4 mb-4">
+            <!-- Scall icon (abacus style) -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-700" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <rect x="4" y="5" width="16" height="14" rx="2" stroke="currentColor" stroke-width="2" fill="none" />
+              <circle cx="8" cy="9" r="1.5" fill="currentColor" />
+              <circle cx="12" cy="9" r="1.5" fill="currentColor" />
+              <circle cx="16" cy="9" r="1.5" fill="currentColor" />
+              <circle cx="8" cy="15" r="1.5" fill="currentColor" />
+              <circle cx="12" cy="15" r="1.5" fill="currentColor" />
+              <circle cx="16" cy="15" r="1.5" fill="currentColor" />
+              <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </div>
+          <h4 class="text-2xl font-bold text-blue-700 mb-4">Mathematics</h4>
+          <ul class="list-disc list-inside text-base space-y-2 text-gray-700 text-left leading-tight">
+            <li>Whole & rational numbers</li>
+            <li>Pattern recognition</li>
+            <li>Factors and multiples, GCD, LCM and Mode</li>
+            <li>Ordering of numbers, ratio and proportion</li>
+            <li>Properties of polygons</li>
+            <li>Angles and their measurement</li>
+            <li>Area and perimeter of polygons</li>
+            <li>Symmetry, reflection, rotation, proportion</li>
+            <li>Nets of cube and parallelepiped</li>
+            <li>Data representation, interpretation</li>
+          </ul>
+        </div>
+        <!-- Science Card -->
+        <div
+          class="bg-white/90 border-2 border-green-200 rounded-2xl shadow-lg p-8 flex flex-col items-center hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+          <div class="bg-green-100 rounded-full p-4 mb-4">
+            <!-- Atom icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-700" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <circle cx="12" cy="12" r="2.5" fill="currentColor" />
+              <ellipse cx="12" cy="12" rx="8" ry="3.5" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <ellipse cx="12" cy="12" rx="3.5" ry="8" stroke="currentColor" stroke-width="1.5" fill="none"
+                transform="rotate(60 12 12)" />
+              <ellipse cx="12" cy="12" rx="3.5" ry="8" stroke="currentColor" stroke-width="1.5" fill="none"
+                transform="rotate(-60 12 12)" />
+            </svg>
+          </div>
+          <h4 class="text-2xl font-bold text-green-700 mb-4">Science</h4>
+          <ul
+            class="list-disc pl-6 text-base text-gray-700 text-left w-full leading-tight grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0">
+            <li class="mb-2">Science skills and methodology</li>
+            <li class="mb-2">General environmental issues</li>
+            <li class="mb-2">Basic ecology</li>
+            <li class="mb-2">Physiology</li>
+            <li class="mb-2">Current technological developments</li>
+            <li class="mb-2">Human anatomy and functions</li>
+            <li class="mb-2">Classifying organisms</li>
+            <li class="mb-2">Mechanics</li>
+            <li class="mb-2">Solar system</li>
+            <li class="mb-2">Planet Earth</li>
+            <li class="mb-2">Electricity and magnetism</li>
+            <li class="mb-2">Matter</li>
+            <li class="mb-2">Thermal properties</li>
+            <li class="mb-2">Light</li>
+            <li class="mb-2">Forces</li>
+            <li class="mb-2">Energy and energy changes</li>
+          </ul>
+        </div>
       </div>
-
-
-      <div class="col-span-3 border p-2">
-        <h4 class="text-xl font-bold text-center mb-2">Science</h4>
-        <ul class="list-disc list-inside text-sm grid grid-cols-2 gap-x-4">
-          <li>Science skills and methodology</li>
-          <li>General environmental issues</li>
-          <li>Basic ecology</li>
-          <li>Physiology</li>
-          <li>Current technological developments</li>
-          <li>Human anatomy and functions</li>
-          <li>Classifying organisms</li>
-          <li>Mechanics</li>
-          <li>Solar system</li>
-          <li>Planet Earth</li>
-          <li>Electricity and magnetism</li>
-          <li>Matter</li>
-          <li>Thermal properties</li>
-          <li>Light</li>
-          <li>Forces</li>
-          <li>Energy and energy changes</li>
-        </ul>
+      <!-- Button Section -->
+      <div class="mt-12 text-center">
+        <a href="BdMSO_2025_Syllabus.pdf" target="_blank"
+          class="inline-block bg-gradient-to-r from-blue-600 to-green-400 text-white px-10 py-4 rounded-xl shadow-lg hover:from-blue-700 hover:to-green-500 transition font-bold text-xl">
+          View Full Syllabus (PDF)
+        </a>
       </div>
-    
     </div>
-
-    <!-- Button Section -->
-    <div class="mt-8 text-center">
-      <a 
-        href="BdMSO_2025_Syllabus.pdf" 
-        target="_blank" 
-        class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 transition duration-200"
-      >
-        View Full Syllabus (PDF)
-      </a>
-    </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Contact -->
-  <section id="contact" class="max-w-5xl mx-auto py-12 px-4 text-center">
-    <h3 class="text-3xl font-semibold mb-4">Contact Us</h3>
-    <p>Email: <a href="mailto:info.bdmso@gmail.com" class="text-blue-700 hover:underline">info.bdmso@gmail.com</a></p>
-    <p>Website: <a href="http://www.bdmso.org" class="text-blue-700 hover:underline">www.bdmso.org</a></p>
-    <p>Facebook: <a href="https://facebook.com/imsobd" class="text-blue-700 hover:underline">facebook.com/imsobd</a></p>
-    <p>Address: Green City Centre, Sat Masjid Road, Dhanmondi, Dhaka</p>
+  <section id="contact" class="max-w-5xl mx-auto py-14 px-6 bg-white/90 rounded-2xl shadow-xl mb-12 mt-12 relative overflow-hidden flex flex-col items-center">
+    <div class="absolute left-0 top-0 z-0 opacity-10">
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="40" stroke="#38bdf8" stroke-width="5" fill="none" />
+        <ellipse cx="50" cy="50" rx="32" ry="12" stroke="#22d3ee" stroke-width="2" fill="none" />
+      </svg>
+    </div>
+    <div class="absolute right-0 bottom-0 z-0 opacity-10">
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+        <rect x="20" y="30" width="60" height="40" rx="10" stroke="#0ea5e9" stroke-width="4" fill="none" />
+        <circle cx="35" cy="50" r="7" fill="#38bdf8" />
+        <circle cx="65" cy="70" r="7" fill="#4ade80" />
+      </svg>
+    </div>
+    <div class="relative z-10 w-full">
+      <h3 class="text-3xl font-bold mb-6 text-center text-blue-800 tracking-tight drop-shadow flex items-center justify-center gap-2">
+        
+        Contact Us
+      </h3>
+      <div class="grid md:grid-cols-2 gap-8 mt-8">
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+          <span class="font-semibold text-blue-800 mb-1">Email</span>
+          <a href="mailto:info.bdmso@gmail.com" class="text-blue-700 hover:underline text-lg">info.bdmso@gmail.com</a>
+        </div>
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+          <span class="font-semibold text-green-700 mb-1">Website</span>
+          <a href="http://www.bdmso.org" class="text-blue-700 hover:underline text-lg">www.bdmso.org</a>
+        </div>
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+          <span class="font-semibold text-blue-700 mb-1">Facebook</span>
+          <a href="https://facebook.com/imsobd" class="text-blue-700 hover:underline text-lg">facebook.com/imsobd</a>
+        </div>
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+          <span class="font-semibold text-yellow-700 mb-1">Address</span>
+          <span class="text-gray-800 text-lg text-center">Green City Centre, Sat Masjid Road, Dhanmondi, Dhaka</span>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <!-- Animated Android Robot Climbing Rope -->
+  <div id="robot-float" class="fixed bottom-8 right-8 z-50 w-20 h-32 select-none pointer-events-none flex flex-col items-center justify-end">
+    <!-- Rope -->
+    <svg width="8" height="120" viewBox="0 0 8 120" class="absolute left-1/2 -translate-x-1/2 top-0 z-0" style="filter: drop-shadow(0 0 2px #aaa);">
+      <rect x="3" y="0" width="2" height="120" rx="1" fill="#bcbcbc"/>
+      <rect x="3" y="0" width="2" height="120" rx="1" fill="url(#rope-stripes)" opacity="0.3"/>
+      <defs>
+        <linearGradient id="rope-stripes" x1="0" y1="0" x2="0" y2="120" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#e2e8f0"/>
+          <stop offset="1" stop-color="#bcbcbc"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <!-- Android Robot -->
+    <svg id="robot-svg" width="80" height="100" viewBox="0 0 80 100" fill="none" class="relative z-10">
+      <!-- Head -->
+      <ellipse cx="40" cy="28" rx="18" ry="16" fill="#3ddc84" stroke="#249e5c" stroke-width="2"/>
+      <!-- Antennae -->
+      <rect x="25" y="10" width="3" height="14" rx="1.5" fill="#249e5c" transform="rotate(-15 25 10)"/>
+      <rect x="52" y="10" width="3" height="14" rx="1.5" fill="#249e5c" transform="rotate(15 52 10)"/>
+      <!-- Eyes -->
+      <circle cx="33" cy="30" r="2.2" fill="#fff"/>
+      <circle cx="47" cy="30" r="2.2" fill="#fff"/>
+      <!-- Body -->
+      <rect x="24" y="40" width="32" height="28" rx="10" fill="#3ddc84" stroke="#249e5c" stroke-width="2"/>
+      <!-- Arms (gripping rope) -->
+      <rect x="14" y="48" width="10" height="8" rx="4" fill="#3ddc84" stroke="#249e5c" stroke-width="2" transform="rotate(-25 14 48)"/>
+      <rect x="56" y="48" width="10" height="8" rx="4" fill="#3ddc84" stroke="#249e5c" stroke-width="2" transform="rotate(25 66 52)"/>
+      <!-- Hands (on rope) -->
+      <ellipse cx="19" cy="54" rx="4" ry="3" fill="#249e5c"/>
+      <ellipse cx="61" cy="54" rx="4" ry="3" fill="#249e5c"/>
+      <!-- Legs (bent, climbing) -->
+      <rect x="30" y="68" width="7" height="18" rx="3.5" fill="#3ddc84" stroke="#249e5c" stroke-width="2" transform="rotate(-15 30 68)"/>
+      <rect x="43" y="68" width="7" height="18" rx="3.5" fill="#3ddc84" stroke="#249e5c" stroke-width="2" transform="rotate(15 50 77)"/>
+      <!-- Feet -->
+      <ellipse cx="33" cy="86" rx="4" ry="2.5" fill="#249e5c"/>
+      <ellipse cx="47" cy="86" rx="4" ry="2.5" fill="#249e5c"/>
+    </svg>
+  </div>
+  <script>
+    // Animate robot up/down and sway on scroll
+    window.addEventListener('scroll', function() {
+      const robot = document.getElementById('robot-float');
+      const scrollY = window.scrollY || window.pageYOffset;
+      // Move up and down in a smooth sine wave based on scroll position
+      const offset = Math.sin(scrollY / 100) * 30; // 30px amplitude
+      // Sway left/right for climbing effect
+      const sway = Math.sin(scrollY / 60) * 10; // 10px left/right
+      robot.style.transform = `translateY(${offset}px) translateX(${sway}px)`;
+    });
+  </script>
 
   <!-- Footer -->
   <footer class="bg-blue-900 text-white text-center py-6">
@@ -206,4 +508,5 @@
   </footer>
 
 </body>
+
 </html>
