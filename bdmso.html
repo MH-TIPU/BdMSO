@@ -451,7 +451,7 @@
   </section>
 
   <!-- Animated Android Robot Climbing Rope -->
-  <div id="robot-float" class="fixed bottom-8 right-8 z-50 w-20 h-32 select-none pointer-events-none flex flex-col items-center justify-end">
+  <div id="robot-float" class="fixed bottom-8 right-8 z-50 w-20 h-32 select-none cursor-pointer pointer-events-auto flex flex-col items-center justify-end">
     <!-- Rope -->
     <svg width="8" height="120" viewBox="0 0 8 120" class="absolute left-1/2 -translate-x-1/2 top-0 z-0" style="filter: drop-shadow(0 0 2px #aaa);">
       <rect x="3" y="0" width="2" height="120" rx="1" fill="#bcbcbc"/>
@@ -499,6 +499,10 @@
       // Sway left/right for climbing effect
       const sway = Math.sin(scrollY / 60) * 10; // 10px left/right
       robot.style.transform = `translateY(${offset}px) translateX(${sway}px)`;
+    });
+    // Scroll to top on robot click
+    document.getElementById('robot-float').addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 
