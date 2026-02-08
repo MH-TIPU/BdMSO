@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BdMSO 2025 - Bangladesh Mathematics & Science Olympiad</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LLFS8F7R1X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-LLFS8F7R1X');
+  </script>
+
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header
+    class="bg-white/90 text-black font-bold shadow-md sticky top-0 z-50 backdrop-blur-md transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center relative">
+      <img src="bdmso_logo.png" class="w-24">
+      <!-- Hamburger for mobile -->
+      <button id="menu-toggle"
+        class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg hover:bg-blue-100 transition focus:outline-none"
+        aria-label="Open menu">
+        <span class="block w-6 h-0.5 bg-blue-700 mb-1"></span>
+        <span class="block w-6 h-0.5 bg-blue-700 mb-1"></span>
+        <span class="block w-6 h-0.5 bg-blue-700"></span>
+      </button>
+      <!-- Nav links (desktop) -->
+      <nav id="main-nav" class="hidden md:flex space-x-2 md:space-x-4 items-center">
+        <a href="bdmso.html"
+          class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Home</a>
+        <a href="results.html"
+          class="px-3 py-2 rounded-lg bg-blue-50 text-blue-700 transition font-semibold">Results</a>
+        <a href="bdmso.html#about"
+          class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">About</a>
+        <a href="timeline.html"
+          class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Timeline</a>
+        <a href="syllabus.html"
+          class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Syllabus</a>
+        <a href="faq.html"
+          class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">FAQ</a>
+        <a href="contact.html"
+          class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Contact</a>
+      </nav>
+      <!-- Mobile menu dropdown -->
+      <div id="mobile-menu"
+        class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg rounded-b-xl py-4 px-6 space-y-2 hidden">
+        <a href="bdmso.html"
+          class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Home</a>
+        <a href="results.html"
+          class="block px-3 py-2 rounded-lg bg-blue-50 text-blue-700 transition font-semibold">Results</a>
+        <a href="bdmso.html#about"
+          class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">About</a>
+        <a href="timeline.html"
+          class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Timeline</a>
+        <a href="syllabus.html"
+          class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Syllabus</a>
+        <a href="faq.html"
+          class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">FAQ</a>
+        <a href="contact.html"
+          class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Contact</a>
+      </div>
+    </div>
+  </header>
+  <script>
+    // Responsive menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    // Optional: Close menu on link click (mobile)
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+
+
+
+  <!-- New Section -->
+  <section id="international-winners"
+    class="relative max-w-5xl mx-auto py-20 px-8 bg-white/90 rounded-2xl shadow-xl mb-16 flex flex-col items-center overflow-hidden">
+    <div class="w-full relative z-10">
+      <div class="w-full rounded-2xl overflow-hidden shadow-lg">
+        <img src="int_winner.jpg" alt="International Winners - IMSO 2025" class="w-full h-auto object-cover block"
+          loading="lazy">
+      </div>
+
+      <h3 class="text-3xl md:text-4xl font-bold mx-6 my-10  text-center text-blue-800 tracking-tight drop-shadow">
+        Bangladesh Received 2 Silver and 10 Bronze in 22nd IMSO, Kedah, Malaysia with Every Participants with a Medal!
+      </h3>
+
+
+      <!-- National team result table (from IMSO_Result_2025.csv) -->
+      <div class="w-full mt-6 overflow-x-auto rounded-2xl shadow-lg bg-white">
+        <table class="min-w-full text-sm align-middle">
+          <thead class="bg-gradient-to-r from-blue-100 to-blue-200 sticky top-0 z-10">
+            <tr>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">#</th>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">Name</th>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">School</th>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">Subject</th>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">Medal</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-blue-100">
+            <!-- Mathematics — Silver -->
+            <tr
+              class="bg-gradient-to-r from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 transition transform hover:-translate-y-0.5 shadow-sm">
+              <td class="px-4 py-2">1</td>
+              <td class="px-4 py-2">Arijit Saha</td>
+              <td class="px-4 py-2">St. Joseph Higher Secondary School</td>
+              <td class="px-4 py-2">Mathematics</td>
+              <td class="px-4 py-2">Silver</td>
+            </tr>
+            <!-- Science — Silver -->
+            <tr
+              class="bg-gradient-to-r from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 transition transform hover:-translate-y-0.5 shadow-sm">
+              <td class="px-4 py-2">2</td>
+              <td class="px-4 py-2">Tahmid Hasan</td>
+              <td class="px-4 py-2">Manarat Dhaka International School and College</td>
+              <td class="px-4 py-2">Science</td>
+              <td class="px-4 py-2">Silver</td>
+            </tr>
+
+            <!-- Mathematics — Bronze -->
+            <tr
+              class="bg-gradient-to-r from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 transition transform hover:-translate-y-0.5 shadow-sm">
+              <td class="px-4 py-2">3</td>
+              <td class="px-4 py-2">Labiba Binte Fazlay Rabbee</td>
+              <td class="px-4 py-2">Mastermind English medium school</td>
+              <td class="px-4 py-2">Mathematics</td>
+              <td class="px-4 py-2">Bronze</td>
+            </tr>
+            <tr
+              class="bg-gradient-to-r from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 transition transform hover:-translate-y-0.5 shadow-sm">
+              <td class="px-4 py-2">4</td>
+              <td class="px-4 py-2">Ehan Abrad Rahman</td>
+              <td class="px-4 py-2">St. Joseph Higher Secondary School</td>
+              <td class="px-4 py-2">Mathematics</td>
+              <td class="px-4 py-2">Bronze</td>
+            </tr>
+            <tr
+              class="bg-gradient-to-r from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 transition transform hover:-translate-y-0.5 shadow-sm">
+              <td class="px-4 py-2">5</td>
+              <td class="px-4 py-2">Md. Nabeeh Hossain</td>
+              <td class="px-4 py-2">St.Joseph Higher Secondary School</td>
+              <td class="px-4 py-2">Mathematics</td>
+              <td class="px-4 py-2">Bronze</td>
+            </tr>
+            <tr
+              class="bg-gradient-to-r from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 transition transform hover:-translate-y-0.5 shadow-sm">
+              <td class="px-4 py-2">6</td>
+              <td class="px-4 py-2">Wafia Hasan Othoi</td>
+              <td class="px-4 py-2">SFX Greenherald International School</td>
+              <td class="px-4 py-2">Mathematics</td>
+              <td class="px-4 py-2">Bronze</td>
+            </tr>
+            <tr
+              class="bg-gradient-to-r from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 transition transform hover:-translate-y-0.5 shadow-sm">
+              <td class="px-4 py-2">7</td>
+              <td class="px-4 py-2">Rafsan Shafiq Talukder</td>
+              <td class="px-4 py-2">Bonwary Lal Government High School, Sirajganj</td>
+              <td class="px-4 py-2">Mathematics</td>
+              <td class="px-4 py-2">Bronze</td>
+            </tr>
+            <!-- Science — Bronze -->
+            <tr
+              class="bg-gradient-to-r from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 transition transform hover:-translate-y-0.5 shadow-sm">
+              <td class="px-4 py-2">8</td>
+              <td class="px-4 py-2">Avigyan Roy Golpo</td>
+              <td class="px-4 py-2">S.F.X. Greenherald International School</td>
+              <td class="px-4 py-2">Science</td>
+              <td class="px-4 py-2">Bronze</td>
+            </tr>
+            <tr
+              class="bg-gradient-to-r from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 transition transform hover:-translate-y-0.5 shadow-sm">
+              <td class="px-4 py-2">9</td>
+              <td class="px-4 py-2">Aaqib Fattah Mustofi</td>
+              <td class="px-4 py-2">St. Joseph International School</td>
+              <td class="px-4 py-2">Science</td>
+              <td class="px-4 py-2">Bronze</td>
+            </tr>
+            <tr
+              class="bg-gradient-to-r from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 transition transform hover:-translate-y-0.5 shadow-sm">
+              <td class="px-4 py-2">10</td>
+              <td class="px-4 py-2">Shahabi Ibn Kabbo</td>
+              <td class="px-4 py-2">Saint Joseph Higher Secondary School</td>
+              <td class="px-4 py-2">Science</td>
+              <td class="px-4 py-2">Bronze</td>
+            </tr>
+            <tr
+              class="bg-gradient-to-r from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 transition transform hover:-translate-y-0.5 shadow-sm">
+              <td class="px-4 py-2">11</td>
+              <td class="px-4 py-2">Syed Ayaan Isa</td>
+              <td class="px-4 py-2">Lighthouse International School</td>
+              <td class="px-4 py-2">Science</td>
+              <td class="px-4 py-2">Bronze</td>
+            </tr>
+            <tr
+              class="bg-gradient-to-r from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 transition transform hover:-translate-y-0.5 shadow-sm">
+              <td class="px-4 py-2">12</td>
+              <td class="px-4 py-2">Md. Miftahul Islam</td>
+              <td class="px-4 py-2">Mymensingh International School</td>
+              <td class="px-4 py-2">Science</td>
+              <td class="px-4 py-2">Bronze</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Fireworks Canvas (layered, behind content) -->
+      <canvas id="fireworks-canvas" class="pointer-events-none absolute inset-0 w-full h-full z-0 mix-blend-screen"
+        aria-hidden="true"></canvas>
+
+    </div>
+
+    <script>
+      (function () {
+        const canvas = document.getElementById('fireworks-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let W = 0, H = 0;
+        function resize() { W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
+        resize(); window.addEventListener('resize', resize);
+
+        const colors = ['#ffd700', '#ff6b6b', '#7c3aed', '#60a5fa', '#34d399', '#f472b6', '#fb923c'];
+
+        function createParticles(x, y) {
+          const parts = [];
+          const count = 28 + Math.floor(Math.random() * 12);
+          for (let i = 0; i < count; i++) {
+            const angle = (Math.PI * 2) * Math.random();
+            const speed = 2 + Math.random() * 5;
+            parts.push({
+              x: x,
+              y: y,
+              vx: Math.cos(angle) * speed,
+              vy: Math.sin(angle) * speed,
+              life: 60 + Math.floor(Math.random() * 40),
+              age: 0,
+              size: 1 + Math.random() * 3,
+              color: colors[Math.floor(Math.random() * colors.length)]
+            });
+          }
+          return parts;
+        }
+
+        let particles = [];
+        let animating = false;
+
+        function launchBurst(cx, cy) {
+          particles = particles.concat(createParticles(cx, cy));
+          if (!animating) { animating = true; requestAnimationFrame(loop); }
+        }
+
+        function loop() {
+          ctx.clearRect(0, 0, W, H);
+          for (let i = particles.length - 1; i >= 0; i--) {
+            const p = particles[i];
+            // simple physics
+            p.vy += 0.06; // gravity
+            p.x += p.vx;
+            p.y += p.vy;
+            p.age++;
+            const t = p.age / p.life;
+            const alpha = Math.max(1 - t, 0);
+            ctx.globalAlpha = alpha;
+            ctx.fillStyle = p.color;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fill();
+            // trails
+            ctx.globalAlpha = alpha * 0.4;
+            ctx.strokeStyle = p.color;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(p.x - p.vx * 2, p.y - p.vy * 2);
+            ctx.lineTo(p.x, p.y);
+            ctx.stroke();
+            if (p.age > p.life || p.y > H + 20) { particles.splice(i, 1); }
+          }
+          if (particles.length > 0) { requestAnimationFrame(loop); } else { animating = false; }
+        }
+
+        // Fire several bursts over ~2 seconds when section becomes visible
+        function startFireworks() {
+          const bursts = 6;
+          let fired = 0;
+          const iv = setInterval(() => {
+            const x = (0.15 + Math.random() * 0.7) * W;
+            const y = (0.1 + Math.random() * 0.4) * H;
+            launchBurst(x, y);
+            fired++;
+            if (fired >= bursts) clearInterval(iv);
+          }, 300);
+        }
+
+        // Trigger fireworks every time the section becomes visible (cooldown to avoid rapid retriggers)
+        const target = document.getElementById('international-winners');
+        if (target) {
+          let lastFire = 0;
+          const cooldown = 2000; // milliseconds
+          const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+              if (e.isIntersecting) {
+                const now = Date.now();
+                if (now - lastFire > cooldown) {
+                  lastFire = now;
+                  // start now and repeat every 5 seconds (avoid duplicates)
+                  if (!window.__bdmsoFireworksInterval) {
+                    startFireworks();
+                    window.__bdmsoFireworksInterval = setInterval(startFireworks, 5000);
+                  }
+                }
+              }
+            });
+          }, { threshold: 0.3 });
+          obs.observe(target);
+        }
+      })();
+    </script>
+  </section>
+
+  <!-- Bangladesh Team for 22nd IMSO Section -->
+  <section id="imso2025-team"
+    class="relative max-w-5xl mx-auto py-16 px-6 bg-white/90 rounded-2xl shadow-xl mb-12 flex flex-col items-center overflow-hidden">
+    <!-- Confetti Canvas -->
+    <!-- <canvas id="confetti-canvas" class="pointer-events-none absolute inset-0 w-full h-full z-20"></canvas> -->
+    <h3
+      class="relative z-10 text-3xl md:text-4xl font-bold mb-8 text-center text-green-800 tracking-tight drop-shadow flex items-center justify-center gap-3">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="inline h-10 w-10 text-yellow-500 drop-shadow-lg animate-bounce"
+          fill="currentColor" viewBox="0 0 24 24"></svg>
+        <path
+          d="M12 2C10.343 2 9 3.343 9 5v2H7c-1.654 0-3 1.346-3 3v2c0 2.757 2.243 5 5 5h1v2.382l-2.447 2.447A1 1 0 008 22h8a1 1 0 00.707-1.707L14 19.382V17h1c2.757 0 5-2.243 5-5v-2c0-1.654-1.346-3-3-3h-2V5c0-1.657-1.343-3-3-3zm-5 7c-.552 0-1 .449-1 1v2c0 1.654 1.346 3 3 3h1V9H7zm11 1c0-.551-.448-1-1-1h-2v6h1c1.654 0 3-1.346 3-3v-2z" />
+        </svg>
+      </span>
+      Bangladesh Team for 22nd IMSO, Kedah, Malaysia
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="inline h-10 w-10 text-yellow-500 drop-shadow-lg animate-bounce"
+          fill="currentColor" viewBox="0 0 24 24"></svg>
+        <path
+          d="M12 2C10.343 2 9 3.343 9 5v2H7c-1.654 0-3 1.346-3 3v2c0 2.757 2.243 5 5 5h1v2.382l-2.447 2.447A1 1 0 008 22h8a1 1 0 00.707-1.707L14 19.382V17h1c2.757 0 5-2.243 5-5v-2c0-1.654-1.346-3-3-3h-2V5c0-1.657-1.343-3-3-3zm-5 7c-.552 0-1 .449-1 1v2c0 1.654 1.346 3 3 3h1V9H7zm11 1c0-.551-.448-1-1-1h-2v6h1c1.654 0 3-1.346 3-3v-2z" />
+        </svg>
+      </span>
+    </h3>
+    <div class="w-full overflow-x-auto">
+      <h4 class="text-2xl font-bold text-blue-700 mb-4 mt-4">Mathematics</h4>
+      <div class="overflow-x-auto rounded-2xl shadow-lg mb-8">
+        <table class="min-w-full text-sm align-middle">
+          <thead class="bg-gradient-to-r from-blue-100 to-blue-200 sticky top-0 z-10">
+            <tr>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">ID</th>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">Name</th>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">Institution</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-blue-100">
+            <tr class="even:bg-yellow-50 hover:bg-yellow-100 transition">
+              <td class="px-4 py-2">B1049</td>
+              <td class="px-4 py-2">Md. Nabeeh Hossain</td>
+              <td class="px-4 py-2">St.Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-yellow-50 hover:bg-yellow-100 transition">
+              <td class="px-4 py-2">B1017</td>
+              <td class="px-4 py-2">Arijit Saha</td>
+              <td class="px-4 py-2">St. Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-yellow-50 hover:bg-yellow-100 transition">
+              <td class="px-4 py-2">B1038</td>
+              <td class="px-4 py-2">Labiba Binte Fazlay Rabbee</td>
+              <td class="px-4 py-2">Mastermind English medium school</td>
+            </tr>
+            <tr class="even:bg-yellow-50 hover:bg-yellow-100 transition">
+              <td class="px-4 py-2">B1025</td>
+              <td class="px-4 py-2">Ehan Abrad Rahman</td>
+              <td class="px-4 py-2">St. Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-yellow-50 hover:bg-yellow-100 transition">
+              <td class="px-4 py-2">M1045</td>
+              <td class="px-4 py-2">Rafsan Shafiq Talukder</td>
+              <td class="px-4 py-2">Bonwary Lal Government High School, Sirajganj</td>
+            </tr>
+            <tr class="even:bg-yellow-50 hover:bg-yellow-100 transition">
+              <td class="px-4 py-2">B1082</td>
+              <td class="px-4 py-2">Wafia Hasan Othoi</td>
+              <td class="px-4 py-2">SFX Greenherald International School</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4 class="text-2xl font-bold text-green-700 mb-4 mt-8">Science</h4>
+      <div class="overflow-x-auto rounded-2xl shadow-lg mb-8">
+        <table class="min-w-full text-sm align-middle">
+          <thead class="bg-gradient-to-r from-green-100 to-green-200 sticky top-0 z-10">
+            <tr>
+              <th class="px-4 py-3 text-left font-bold text-green-900">ID</th>
+              <th class="px-4 py-3 text-left font-bold text-green-900">Name</th>
+              <th class="px-4 py-3 text-left font-bold text-green-900">Institution</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-green-100">
+            <tr class="even:bg-yellow-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">S1016</td>
+              <td class="px-4 py-2">Syed Ayaan Isa</td>
+              <td class="px-4 py-2">Lighthouse International School</td>
+            </tr>
+            <tr class="even:bg-yellow-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">B1003</td>
+              <td class="px-4 py-2">Aaqib Fattah Mustofi</td>
+              <td class="px-4 py-2">St. Joseph International School</td>
+            </tr>
+            <tr class="even:bg-yellow-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">B1077</td>
+              <td class="px-4 py-2">Tahmid Hasan</td>
+              <td class="px-4 py-2">Manarat Dhaka International School and College</td>
+            </tr>
+            <tr class="even:bg-yellow-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">B1023</td>
+              <td class="px-4 py-2">Avigyan Roy Golpo</td>
+              <td class="px-4 py-2">S.F.X. Greenherald International School</td>
+            </tr>
+            <tr class="even:bg-yellow-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">B1071</td>
+              <td class="px-4 py-2">Shahabi Ibn Kabbo</td>
+              <td class="px-4 py-2">Saint Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-yellow-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">B1051</td>
+              <td class="px-4 py-2">Md. Miftahul Islam</td>
+              <td class="px-4 py-2">Mymensingh International School</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script>
+      // Simple confetti animation
+      (function () {
+        const canvas = document.getElementById('confetti-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let W = 0, H = 0;
+        function resize() {
+          W = canvas.width = canvas.offsetWidth;
+          H = canvas.height = canvas.offsetHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize);
+
+        const colors = ['#facc15', '#38bdf8', '#4ade80', '#f472b6', '#f87171', '#a78bfa', '#fbbf24', '#34d399', '#60a5fa', '#f59e42'];
+        const confettiCount = 80;
+        const confetti = [];
+        for (let i = 0; i < confettiCount; i++) {
+          confetti.push({
+            x: Math.random() * W,
+            y: Math.random() * -H,
+            r: 6 + Math.random() * 8,
+            d: 2 + Math.random() * 2,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            tilt: Math.random() * 10 - 5,
+            tiltAngle: 0,
+            tiltAngleIncremental: (Math.random() * 0.07) + 0.05
+          });
+        }
+        function draw() {
+          ctx.clearRect(0, 0, W, H);
+          for (let i = 0; i < confettiCount; i++) {
+            let c = confetti[i];
+            ctx.beginPath();
+            ctx.ellipse(
+              c.x + c.tilt,
+              c.y,
+              c.r,
+              c.r * 0.4,
+              c.tilt,
+              0,
+              2 * Math.PI
+            );
+            ctx.fillStyle = c.color;
+            ctx.fill();
+          }
+        }
+        function update() {
+          for (let i = 0; i < confettiCount; i++) {
+            let c = confetti[i];
+            c.y += c.d;
+            c.x += Math.sin(c.tiltAngle) * 2;
+            c.tiltAngle += c.tiltAngleIncremental;
+            c.tilt = Math.sin(c.tiltAngle) * 10;
+            if (c.y > H + 20) {
+              c.y = -10;
+              c.x = Math.random() * W;
+              c.tilt = Math.random() * 10 - 5;
+            }
+          }
+        }
+        function loop() {
+          draw();
+          update();
+          requestAnimationFrame(loop);
+        }
+        loop();
+      })();
+    </script>
+  </section>
+
+  <!-- Result 2025 Section -->
+  <section id="result2025"
+    class="max-w-5xl mx-auto py-16 px-6 bg-white/90 rounded-2xl shadow-xl mb-12 flex flex-col items-center">
+    <h3 class="text-4xl font-bold mb-8 text-center text-blue-800 tracking-tight drop-shadow">National Round Result 2025
+    </h3>
+    <div class="w-full overflow-x-auto">
+      <h4 class="text-2xl font-bold text-blue-700 mb-4 mt-8">Mathematics</h4>
+      <h5 class="text-xl font-semibold text-yellow-600 mb-2">Gold</h5>
+      <div class="overflow-x-auto rounded-2xl shadow-lg mb-8">
+        <table class="min-w-full text-sm align-middle">
+          <thead class="bg-gradient-to-r from-blue-100 to-blue-200 sticky top-0 z-10">
+            <tr>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">Position</th>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">ID</th>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">Name</th>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">Class</th>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">School</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-blue-100">
+            <tr class="even:bg-yellow-50 hover:bg-yellow-100 transition">
+              <td class="px-4 py-2">1</td>
+              <td class="px-4 py-2">B1049</td>
+              <td class="px-4 py-2">Md. Nabeeh Hossain</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St.Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-yellow-50 hover:bg-yellow-100 transition">
+              <td class="px-4 py-2">2</td>
+              <td class="px-4 py-2">B1012</td>
+              <td class="px-4 py-2">Ali Omar</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St. Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-yellow-50 hover:bg-yellow-100 transition">
+              <td class="px-4 py-2">3</td>
+              <td class="px-4 py-2">M1044</td>
+              <td class="px-4 py-2">Nowshin Saiyara Sahrin</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">BAF Shaheen College Kurmitola</td>
+            </tr>
+            <tr class="even:bg-yellow-50 hover:bg-yellow-100 transition">
+              <td class="px-4 py-2">4</td>
+              <td class="px-4 py-2">B1017</td>
+              <td class="px-4 py-2">Arijit Saha</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St. Joseph Higher Secondary School</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h5 class="text-xl font-semibold text-gray-700 mb-2">Silver</h5>
+      <div class="overflow-x-auto rounded-2xl shadow-lg mb-8">
+        <table class="min-w-full text-sm align-middle">
+          <thead class="bg-gradient-to-r from-blue-100 to-blue-200 sticky top-0 z-10">
+            <tr>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">Position</th>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">ID</th>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">Name</th>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">Class</th>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">School</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-blue-100">
+            <tr class="even:bg-gray-50 hover:bg-blue-50 transition">
+              <td class="px-4 py-2">1</td>
+              <td class="px-4 py-2">B1082</td>
+              <td class="px-4 py-2">Wafia Hasan Othoi</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">SFX Greenherald International School</td>
+            </tr>
+            <tr class="even:bg-gray-50 hover:bg-blue-50 transition">
+              <td class="px-4 py-2">2</td>
+              <td class="px-4 py-2">B1038</td>
+              <td class="px-4 py-2">Labiba Binte Fazlay Rabbee</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">Mastermind English medium school</td>
+            </tr>
+            <tr class="even:bg-gray-50 hover:bg-blue-50 transition">
+              <td class="px-4 py-2">3</td>
+              <td class="px-4 py-2">B1025</td>
+              <td class="px-4 py-2">Ehan Abrad Rahman</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St. Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-gray-50 hover:bg-blue-50 transition">
+              <td class="px-4 py-2">4</td>
+              <td class="px-4 py-2">B1048</td>
+              <td class="px-4 py-2">Md. Tahsin Ul Islam</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St . Joseph International School</td>
+            </tr>
+            <tr class="even:bg-gray-50 hover:bg-blue-50 transition">
+              <td class="px-4 py-2">5</td>
+              <td class="px-4 py-2">M1035</td>
+              <td class="px-4 py-2">Md. Shahid Morsalin</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St. Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-gray-50 hover:bg-blue-50 transition">
+              <td class="px-4 py-2">6</td>
+              <td class="px-4 py-2">B1004</td>
+              <td class="px-4 py-2">Abdul Muhaimin Afif</td>
+              <td class="px-4 py-2">Four</td>
+              <td class="px-4 py-2">St.Joseph higher secondary school</td>
+            </tr>
+            <tr class="even:bg-gray-50 hover:bg-blue-50 transition">
+              <td class="px-4 py-2">7</td>
+              <td class="px-4 py-2">M1045</td>
+              <td class="px-4 py-2">Rafsan Shafiq Talukder</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">Bonwary Lal Government High School, Sirajganj</td>
+            </tr>
+            <tr class="even:bg-gray-50 hover:bg-blue-50 transition">
+              <td class="px-4 py-2">8</td>
+              <td class="px-4 py-2">B1069</td>
+              <td class="px-4 py-2">Rushan Mahmud</td>
+              <td class="px-4 py-2">Four</td>
+              <td class="px-4 py-2">St. Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-gray-50 hover:bg-blue-50 transition">
+              <td class="px-4 py-2">9</td>
+              <td class="px-4 py-2">B1007</td>
+              <td class="px-4 py-2">Ahanaf Adib</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St. Joseph International School</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h5 class="text-xl font-semibold text-amber-800 mb-2">Bronze</h5>
+      <div class="overflow-x-auto rounded-2xl shadow-lg mb-8">
+        <table class="min-w-full text-sm align-middle">
+          <thead class="bg-gradient-to-r from-blue-100 to-blue-200 sticky top-0 z-10">
+            <tr>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">Position</th>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">ID</th>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">Name</th>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">Class</th>
+              <th class="px-4 py-3 text-left font-bold text-blue-900">School</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-blue-100">
+            <tr class="even:bg-amber-50 hover:bg-amber-100 transition">
+              <td class="px-4 py-2">1</td>
+              <td class="px-4 py-2">B1060</td>
+              <td class="px-4 py-2">Noyon Mondal</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-amber-100 transition">
+              <td class="px-4 py-2">2</td>
+              <td class="px-4 py-2">M1034</td>
+              <td class="px-4 py-2">Md. Samin Saif</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-amber-100 transition">
+              <td class="px-4 py-2">3</td>
+              <td class="px-4 py-2">B1061</td>
+              <td class="px-4 py-2">Priyangshu Riddhi Roy</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">SFX Greenherald International School</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-amber-100 transition">
+              <td class="px-4 py-2">4</td>
+              <td class="px-4 py-2">B1081</td>
+              <td class="px-4 py-2">Uddipto Biswas</td>
+              <td class="px-4 py-2">Four</td>
+              <td class="px-4 py-2">St. Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-amber-100 transition">
+              <td class="px-4 py-2">5</td>
+              <td class="px-4 py-2">B1042</td>
+              <td class="px-4 py-2">Mahjabeen Binte Reza</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">Excel Academy</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-amber-100 transition">
+              <td class="px-4 py-2">6</td>
+              <td class="px-4 py-2">M1067</td>
+              <td class="px-4 py-2">Zarif Wahed</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-amber-100 transition">
+              <td class="px-4 py-2">7</td>
+              <td class="px-4 py-2">B1005</td>
+              <td class="px-4 py-2">Abdullah Abrar Wasi</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">Dhaka residential model college</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-amber-100 transition">
+              <td class="px-4 py-2">8</td>
+              <td class="px-4 py-2">B1006</td>
+              <td class="px-4 py-2">Abdullah Al Mueed Ahnaf</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St. Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-amber-100 transition">
+              <td class="px-4 py-2">9</td>
+              <td class="px-4 py-2">B1053</td>
+              <td class="px-4 py-2">Mohammad Ismail</td>
+              <td class="px-4 py-2">Four</td>
+              <td class="px-4 py-2">St. Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-amber-100 transition">
+              <td class="px-4 py-2">10</td>
+              <td class="px-4 py-2">M1008</td>
+              <td class="px-4 py-2">Abrar Jahin</td>
+              <td class="px-4 py-2">Four</td>
+              <td class="px-4 py-2">st. Joseph Higher Secondary School And College</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-amber-100 transition">
+              <td class="px-4 py-2">11</td>
+              <td class="px-4 py-2">M1033</td>
+              <td class="px-4 py-2">MD. FAIYAZ AWSAF</td>
+              <td class="px-4 py-2">Four</td>
+              <td class="px-4 py-2">SAINT FRANCIS XAVIER HIGH SCHOOL</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-amber-100 transition">
+              <td class="px-4 py-2">12</td>
+              <td class="px-4 py-2">B1065</td>
+              <td class="px-4 py-2">Ramiza Hasan</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">S.F.X.Greenherald International School</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-amber-100 transition">
+              <td class="px-4 py-2">13</td>
+              <td class="px-4 py-2">B1066</td>
+              <td class="px-4 py-2">Ratul Saha</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St.Joseph Higher Secondary School</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h4 class="text-2xl font-bold text-green-700 mb-4 mt-12">Science</h4>
+      <h5 class="text-xl font-semibold text-yellow-600 mb-2">Gold</h5>
+      <div class="overflow-x-auto rounded-2xl shadow-lg mb-8">
+        <table class="min-w-full text-sm align-middle">
+          <thead class="bg-gradient-to-r from-green-100 to-green-200 sticky top-0 z-10">
+            <tr>
+              <th class="px-4 py-3 text-left font-bold text-green-900">Position</th>
+              <th class="px-4 py-3 text-left font-bold text-green-900">ID</th>
+              <th class="px-4 py-3 text-left font-bold text-green-900">Name</th>
+              <th class="px-4 py-3 text-left font-bold text-green-900">Class</th>
+              <th class="px-4 py-3 text-left font-bold text-green-900">School</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-green-100">
+            <tr class="even:bg-yellow-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">1</td>
+              <td class="px-4 py-2">S1016</td>
+              <td class="px-4 py-2">Syed Ayaan Isa</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">Lighthouse International School</td>
+            </tr>
+            <tr class="even:bg-yellow-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">2</td>
+              <td class="px-4 py-2">B1023</td>
+              <td class="px-4 py-2">Avigyan Roy Golpo</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">S.F.X. Greenherald International School</td>
+            </tr>
+            <tr class="even:bg-yellow-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">3</td>
+              <td class="px-4 py-2">B1003</td>
+              <td class="px-4 py-2">Aaqib Fattah Mustofi</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St. Joseph International School</td>
+            </tr>
+            <tr class="even:bg-yellow-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">4</td>
+              <td class="px-4 py-2">B1012</td>
+              <td class="px-4 py-2">Ali Omar</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St. Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-yellow-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">5</td>
+              <td class="px-4 py-2">B1051</td>
+              <td class="px-4 py-2">Md. Miftahul Islam</td>
+              <td class="px-4 py-2">Four</td>
+              <td class="px-4 py-2">Mymensingh International School</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h5 class="text-xl font-semibold text-gray-700 mb-2">Silver</h5>
+      <div class="overflow-x-auto rounded-2xl shadow-lg mb-8">
+        <table class="min-w-full text-sm align-middle">
+          <thead class="bg-gradient-to-r from-green-100 to-green-200 sticky top-0 z-10">
+            <tr>
+              <th class="px-4 py-3 text-left font-bold text-green-900">Position</th>
+              <th class="px-4 py-3 text-left font-bold text-green-900">ID</th>
+              <th class="px-4 py-3 text-left font-bold text-green-900">Name</th>
+              <th class="px-4 py-3 text-left font-bold text-green-900">Class</th>
+              <th class="px-4 py-3 text-left font-bold text-green-900">School</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-green-100">
+            <tr class="even:bg-gray-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">1</td>
+              <td class="px-4 py-2">B1071</td>
+              <td class="px-4 py-2">Shahabi Ibn Kabbo</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">Saint Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-gray-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">2</td>
+              <td class="px-4 py-2">B1060</td>
+              <td class="px-4 py-2">Noyon Mondal</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-gray-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">3</td>
+              <td class="px-4 py-2">B1082</td>
+              <td class="px-4 py-2">Wafia Hasan Othoi</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">SFX Greenherald International School</td>
+            </tr>
+            <tr class="even:bg-gray-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">4</td>
+              <td class="px-4 py-2">B1076</td>
+              <td class="px-4 py-2">Taaseen Mahmud Farhan</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">ST. Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-gray-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">5</td>
+              <td class="px-4 py-2">B1047</td>
+              <td class="px-4 py-2">MD. MAHAMUDUR RAHMAN</td>
+              <td class="px-4 py-2">Four</td>
+              <td class="px-4 py-2">St. Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-gray-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">6</td>
+              <td class="px-4 py-2">B1007</td>
+              <td class="px-4 py-2">Ahanaf Adib</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St. Joseph International School</td>
+            </tr>
+            <tr class="even:bg-gray-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">7</td>
+              <td class="px-4 py-2">B1048</td>
+              <td class="px-4 py-2">Md. Tahsin Ul Islam</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St . Joseph International School</td>
+            </tr>
+            <tr class="even:bg-gray-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">8</td>
+              <td class="px-4 py-2">B1016</td>
+              <td class="px-4 py-2">Arham Abid</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">Baseerah International School, Dhaka</td>
+            </tr>
+            <tr class="even:bg-gray-50 hover:bg-green-50 transition">
+              <td class="px-4 py-2">9</td>
+              <td class="px-4 py-2">B1026</td>
+              <td class="px-4 py-2">Fariq Sahel Mustofi</td>
+              <td class="px-4 py-2">Four</td>
+              <td class="px-4 py-2">St. Joseph International School</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h5 class="text-xl font-semibold text-amber-800 mb-2">Bronze</h5>
+      <div class="overflow-x-auto rounded-2xl shadow-lg mb-8">
+        <table class="min-w-full text-sm align-middle">
+          <thead class="bg-gradient-to-r from-green-100 to-green-200 sticky top-0 z-10">
+            <tr>
+              <th class="px-4 py-3 text-left font-bold text-green-900">Position</th>
+              <th class="px-4 py-3 text-left font-bold text-green-900">ID</th>
+              <th class="px-4 py-3 text-left font-bold text-green-900">Name</th>
+              <th class="px-4 py-3 text-left font-bold text-green-900">Class</th>
+              <th class="px-4 py-3 text-left font-bold text-green-900">School</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-green-100">
+            <tr class="even:bg-amber-50 hover:bg-green-100 transition">
+              <td class="px-4 py-2">1</td>
+              <td class="px-4 py-2">B1029</td>
+              <td class="px-4 py-2">Haris Al Fihri Aaban</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St.Joseph Higher secondary school</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-green-100 transition">
+              <td class="px-4 py-2">2</td>
+              <td class="px-4 py-2">B1017</td>
+              <td class="px-4 py-2">Arijit Saha</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St. Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-green-100 transition">
+              <td class="px-4 py-2">3</td>
+              <td class="px-4 py-2">S1008</td>
+              <td class="px-4 py-2">Mahbub Alam Khan Tahan</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">Daffodil international School</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-green-100 transition">
+              <td class="px-4 py-2">4</td>
+              <td class="px-4 py-2">B1061</td>
+              <td class="px-4 py-2">Priyangshu Riddhi Roy</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">SFX Greenherald International School</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-green-100 transition">
+              <td class="px-4 py-2">5</td>
+              <td class="px-4 py-2">S1010</td>
+              <td class="px-4 py-2">Mohammad Jawad Khan</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">Daffodil International School</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-green-100 transition">
+              <td class="px-4 py-2">6</td>
+              <td class="px-4 py-2">B1042</td>
+              <td class="px-4 py-2">Mahjabeen Binte Reza</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">Excel Academy</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-green-100 transition">
+              <td class="px-4 py-2">7</td>
+              <td class="px-4 py-2">B1009</td>
+              <td class="px-4 py-2">Ahnaf Adel Helali Foiz</td>
+              <td class="px-4 py-2">Four</td>
+              <td class="px-4 py-2">Wheaton International School</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-green-100 transition">
+              <td class="px-4 py-2">8</td>
+              <td class="px-4 py-2">B1066</td>
+              <td class="px-4 py-2">Ratul Saha</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">St.Joseph Higher Secondary School</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-green-100 transition">
+              <td class="px-4 py-2">9</td>
+              <td class="px-4 py-2">B1073</td>
+              <td class="px-4 py-2">Shayan Murad Sarker</td>
+              <td class="px-4 py-2">Four</td>
+              <td class="px-4 py-2">Glenrich International School</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-green-100 transition">
+              <td class="px-4 py-2">10</td>
+              <td class="px-4 py-2">S1013</td>
+              <td class="px-4 py-2">Raihanur Emu</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">Daffodil International School</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-green-100 transition">
+              <td class="px-4 py-2">11</td>
+              <td class="px-4 py-2">S1012</td>
+              <td class="px-4 py-2">NUWAIB ASHRAF SAMAWAT</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">Daffodil International School, Uttara</td>
+            </tr>
+            <tr class="even:bg-amber-50 hover:bg-green-100 transition">
+              <td class="px-4 py-2">12</td>
+              <td class="px-4 py-2">B1077</td>
+              <td class="px-4 py-2">Tahmid Hasan</td>
+              <td class="px-4 py-2">Five</td>
+              <td class="px-4 py-2">Manarat Dhaka International School and College</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-blue-800 via-blue-900 to-green-800 text-white py-8 mt-8 shadow-inner">
+    <div class="max-w-5xl mx-auto flex flex-col items-center justify-center px-6 gap-4 text-center">
+      <div class="flex flex-col items-center gap-3">
+
+        <div>
+          <p class="font-bold text-lg tracking-wide">Bangladesh Mathematics & Science Olympiad</p>
+          <p class="text-sm text-blue-100">&copy; 2025 BdMSO | Powered by <span
+              class="font-semibold text-yellow-300">BdOSN</span> & <span
+              class="font-semibold text-green-300">SPSB</span></p>
+          <p class="text-sm">
+            Developed by
+            <a href="https://boylar.com" target="_blank" class="text-yellow-300 font-semibold hover:underline">Mosaraf
+              Hossain Tipu</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

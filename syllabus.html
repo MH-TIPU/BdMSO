@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syllabus - BdMSO 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LLFS8F7R1X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-LLFS8F7R1X');
+    </script>
+
+</head>
+
+<body class="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header
+        class="bg-white/90 text-black font-bold shadow-md sticky top-0 z-50 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center relative">
+            <a href="bdmso.html"><img src="bdmso_logo.png" class="w-24"></a>
+            <!-- Hamburger for mobile -->
+            <button id="menu-toggle"
+                class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg hover:bg-blue-100 transition focus:outline-none"
+                aria-label="Open menu">
+                <span class="block w-6 h-0.5 bg-blue-700 mb-1"></span>
+                <span class="block w-6 h-0.5 bg-blue-700 mb-1"></span>
+                <span class="block w-6 h-0.5 bg-blue-700"></span>
+            </button>
+            <!-- Nav links (desktop) -->
+            <nav id="main-nav" class="hidden md:flex space-x-2 md:space-x-4 items-center">
+                <a href="bdmso.html"
+                    class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Home</a>
+                <a href="results.html"
+                    class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Results</a>
+                <a href="bdmso.html#about"
+                    class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">About</a>
+                <a href="timeline.html"
+                    class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Timeline</a>
+                <a href="syllabus.html"
+                    class="px-3 py-2 rounded-lg bg-blue-50 text-blue-700 transition font-semibold">Syllabus</a>
+                <a href="faq.html"
+                    class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">FAQ</a>
+                <a href="contact.html"
+                    class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Contact</a>
+            </nav>
+            <!-- Mobile menu dropdown -->
+            <div id="mobile-menu"
+                class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg rounded-b-xl py-4 px-6 space-y-2 hidden">
+                <a href="bdmso.html"
+                    class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Home</a>
+                <a href="results.html"
+                    class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Results</a>
+                <a href="bdmso.html#about"
+                    class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">About</a>
+                <a href="timeline.html"
+                    class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Timeline</a>
+                <a href="syllabus.html"
+                    class="block px-3 py-2 rounded-lg bg-blue-50 text-blue-700 transition font-semibold">Syllabus</a>
+                <a href="faq.html"
+                    class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">FAQ</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Contact</a>
+            </div>
+        </div>
+    </header>
+    <script>
+        // Responsive menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        // Optional: Close menu on link click (mobile)
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+    <!-- Syllabus Section -->
+    <main class="flex-grow">
+        <section id="syllabus"
+            class="bg-gradient-to-br from-blue-50 via-white to-yellow-50 py-16 px-4 rounded-2xl shadow-lg mb-8 mt-4">
+            <div class="max-w-5xl mx-auto">
+                <h3 class="text-4xl font-bold text-center mb-10 text-blue-800 tracking-tight drop-shadow">Syllabus
+                    Overview</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Mathematics Card -->
+                    <div
+                        class="bg-white/90 border-2 border-blue-200 rounded-2xl shadow-lg p-8 flex flex-col items-center hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+                        <div class="bg-blue-100 rounded-full p-4 mb-4">
+                            <!-- Scall icon (abacus style) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-700" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <rect x="4" y="5" width="16" height="14" rx="2" stroke="currentColor" stroke-width="2"
+                                    fill="none" />
+                                <circle cx="8" cy="9" r="1.5" fill="currentColor" />
+                                <circle cx="12" cy="9" r="1.5" fill="currentColor" />
+                                <circle cx="16" cy="9" r="1.5" fill="currentColor" />
+                                <circle cx="8" cy="15" r="1.5" fill="currentColor" />
+                                <circle cx="12" cy="15" r="1.5" fill="currentColor" />
+                                <circle cx="16" cy="15" r="1.5" fill="currentColor" />
+                                <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-blue-700 mb-4">Mathematics</h4>
+                        <ul class="list-disc list-inside text-base space-y-2 text-gray-700 text-left leading-tight">
+                            <li>Whole & rational numbers</li>
+                            <li>Pattern recognition</li>
+                            <li>Factors and multiples, GCD, LCM and Mode</li>
+                            <li>Ordering of numbers, ratio and proportion</li>
+                            <li>Properties of polygons</li>
+                            <li>Angles and their measurement</li>
+                            <li>Area and perimeter of polygons</li>
+                            <li>Symmetry, reflection, rotation, proportion</li>
+                            <li>Nets of cube and parallelepiped</li>
+                            <li>Data representation, interpretation</li>
+                        </ul>
+                    </div>
+                    <!-- Science Card -->
+                    <div
+                        class="bg-white/90 border-2 border-green-200 rounded-2xl shadow-lg p-8 flex flex-col items-center hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+                        <div class="bg-green-100 rounded-full p-4 mb-4">
+                            <!-- Atom icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-700" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <circle cx="12" cy="12" r="2.5" fill="currentColor" />
+                                <ellipse cx="12" cy="12" rx="8" ry="3.5" stroke="currentColor" stroke-width="1.5"
+                                    fill="none" />
+                                <ellipse cx="12" cy="12" rx="3.5" ry="8" stroke="currentColor" stroke-width="1.5"
+                                    fill="none" transform="rotate(60 12 12)" />
+                                <ellipse cx="12" cy="12" rx="3.5" ry="8" stroke="currentColor" stroke-width="1.5"
+                                    fill="none" transform="rotate(-60 12 12)" />
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold text-green-700 mb-4">Science</h4>
+                        <ul
+                            class="list-disc pl-6 text-base text-gray-700 text-left w-full leading-tight grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0">
+                            <li class="mb-2">Science skills and methodology</li>
+                            <li class="mb-2">General environmental issues</li>
+                            <li class="mb-2">Basic ecology</li>
+                            <li class="mb-2">Physiology</li>
+                            <li class="mb-2">Current technological developments</li>
+                            <li class="mb-2">Human anatomy and functions</li>
+                            <li class="mb-2">Classifying organisms</li>
+                            <li class="mb-2">Mechanics</li>
+                            <li class="mb-2">Solar system</li>
+                            <li class="mb-2">Planet Earth</li>
+                            <li class="mb-2">Electricity and magnetism</li>
+                            <li class="mb-2">Matter</li>
+                            <li class="mb-2">Thermal properties</li>
+                            <li class="mb-2">Light</li>
+                            <li class="mb-2">Forces</li>
+                            <li class="mb-2">Energy and energy changes</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Button Section -->
+                <div class="mt-12 text-center">
+                    <a href="BdMSO_2025_Syllabus.pdf" target="_blank"
+                        class="inline-block bg-gradient-to-r from-blue-600 to-green-400 text-white px-10 py-4 rounded-xl shadow-lg hover:from-blue-700 hover:to-green-500 transition font-bold text-xl">
+                        View Full Syllabus (PDF)
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-blue-800 via-blue-900 to-green-800 text-white py-8 mt-8 shadow-inner">
+        <div class="max-w-5xl mx-auto flex flex-col items-center justify-center px-6 gap-4 text-center">
+            <div class="flex flex-col items-center gap-3">
+
+                <div>
+                    <p class="font-bold text-lg tracking-wide">Bangladesh Mathematics & Science Olympiad</p>
+                    <p class="text-sm text-blue-100">&copy; 2025 BdMSO | Powered by <span
+                            class="font-semibold text-yellow-300">BdOSN</span> & <span
+                            class="font-semibold text-green-300">SPSB</span></p>
+                    <p class="text-sm">
+                        Developed by
+                        <a href="https://boylar.com" target="_blank"
+                            class="text-yellow-300 font-semibold hover:underline">Mosaraf Hossain Tipu</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

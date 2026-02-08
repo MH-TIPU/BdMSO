@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timeline - BdMSO 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LLFS8F7R1X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-LLFS8F7R1X');
+    </script>
+
+</head>
+
+<body class="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header
+        class="bg-white/90 text-black font-bold shadow-md sticky top-0 z-50 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center relative">
+            <a href="bdmso.html"><img src="bdmso_logo.png" class="w-24"></a>
+            <!-- Hamburger for mobile -->
+            <button id="menu-toggle"
+                class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg hover:bg-blue-100 transition focus:outline-none"
+                aria-label="Open menu">
+                <span class="block w-6 h-0.5 bg-blue-700 mb-1"></span>
+                <span class="block w-6 h-0.5 bg-blue-700 mb-1"></span>
+                <span class="block w-6 h-0.5 bg-blue-700"></span>
+            </button>
+            <!-- Nav links (desktop) -->
+            <nav id="main-nav" class="hidden md:flex space-x-2 md:space-x-4 items-center">
+                <a href="bdmso.html"
+                    class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Home</a>
+                <a href="results.html"
+                    class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Results</a>
+                <a href="bdmso.html#about"
+                    class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">About</a>
+                <a href="timeline.html"
+                    class="px-3 py-2 rounded-lg bg-blue-50 text-blue-700 transition font-semibold">Timeline</a>
+                <a href="syllabus.html"
+                    class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Syllabus</a>
+                <a href="faq.html"
+                    class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">FAQ</a>
+                <a href="contact.html"
+                    class="px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Contact</a>
+            </nav>
+            <!-- Mobile menu dropdown -->
+            <div id="mobile-menu"
+                class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg rounded-b-xl py-4 px-6 space-y-2 hidden">
+                <a href="bdmso.html"
+                    class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Home</a>
+                <a href="results.html"
+                    class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Results</a>
+                <a href="bdmso.html#about"
+                    class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">About</a>
+                <a href="timeline.html"
+                    class="block px-3 py-2 rounded-lg bg-blue-50 text-blue-700 transition font-semibold">Timeline</a>
+                <a href="syllabus.html"
+                    class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Syllabus</a>
+                <a href="faq.html"
+                    class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">FAQ</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-700 transition font-semibold">Contact</a>
+            </div>
+        </div>
+    </header>
+    <script>
+        // Responsive menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        // Optional: Close menu on link click (mobile)
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+    <!-- Timeline Section -->
+    <main class="flex-grow">
+        <section id="timeline"
+            class="bg-gradient-to-br from-blue-50 via-white to-yellow-50 py-16 px-4 rounded-2xl shadow-lg mb-8 mt-4">
+            <div class="max-w-6xl mx-auto">
+                <h3 class="text-3xl font-semibold text-center mb-16 text-blue-800">Key Dates</h3>
+                <div class="relative grid grid-cols-9 gap-y-4">
+                    <!-- vertical center line -->
+                    <div
+                        class="col-span-9 absolute left-1/2 transform -translate-x-1/2 h-full border-l-4 border-blue-400">
+                    </div>
+                    <!-- Event 1 (right) -->
+                    <div class="col-span-4"></div>
+                    <div class="col-span-1 flex justify-center items-center">
+                        <span class="w-5 h-5 bg-blue-400 border-4 border-white rounded-full z-10"></span>
+                    </div>
+                    <div class="col-span-4 text-left pl-4 flex flex-col items-start">
+                        <div class="bg-white rounded-xl shadow p-4 w-full max-w-xs">
+                            <div class="flex items-center mb-2">
+                                <h4 class="text-lg font-bold text-blue-800">July 12– August 14, 2025</h4>
+                                <span class="inline-block w-4 h-4 bg-blue-400 rounded-full ml-2"></span>
+                            </div>
+                            <p class="text-gray-700">Online Registration <br> Activation Campaign</p>
+                        </div>
+                    </div>
+                    <!-- Event 2 (left) -->
+                    <div class="col-span-4 text-right pr-4 flex flex-col items-end">
+                        <div class="bg-white rounded-xl shadow p-4 w-full max-w-xs">
+                            <div class="flex items-center justify-end mb-2">
+                                <span class="inline-block w-4 h-4 bg-yellow-400 rounded-full mr-2"></span>
+                                <h4 class="text-lg font-bold text-blue-800">August 22, 2025</h4>
+                            </div>
+                            <p class="text-gray-700">BdMSO National Round</p>
+                            <p class="text-gray-700"> <span class="font-bold">Venue:</span> St. Joseph Higher Secondary
+                                School</p>
+
+                        </div>
+                    </div>
+                    <div class="col-span-1 flex justify-center items-center">
+                        <span class="w-5 h-5 bg-yellow-400 border-4 border-white rounded-full z-10"></span>
+                    </div>
+                    <div class="col-span-4"></div>
+                    <!-- Event 3 (right) -->
+                    <div class="col-span-4"></div>
+                    <div class="col-span-1 flex justify-center items-center">
+                        <span class="w-5 h-5 bg-green-400 border-4 border-white rounded-full z-10"></span>
+                    </div>
+                    <div class="col-span-4 text-left pl-4 flex flex-col items-start">
+                        <div class="bg-white rounded-xl shadow p-4 w-full max-w-xs">
+                            <div class="flex items-center mb-2">
+                                <h4 class="text-lg font-bold text-blue-800">August 26-28, 2025</h4>
+                                <span class="inline-block w-4 h-4 bg-green-400 rounded-full ml-2"></span>
+                            </div>
+                            <p class="text-gray-700">BdMSO National Camp</p>
+                        </div>
+                    </div>
+                    <!-- Event 4 (left) -->
+                    <div class="col-span-4 text-right pr-4 flex flex-col items-end">
+                        <div class="bg-white rounded-xl shadow p-4 w-full max-w-xs">
+                            <div class="flex items-center justify-end mb-2">
+                                <span class="inline-block w-4 h-4 bg-pink-400 rounded-full mr-2"></span>
+                                <h4 class="text-lg font-bold text-blue-800">August 28, 2025</h4>
+                            </div>
+                            <p class="text-gray-700">Team Selection Test</p>
+                        </div>
+                    </div>
+                    <div class="col-span-1 flex justify-center items-center">
+                        <span class="w-5 h-5 bg-pink-400 border-4 border-white rounded-full z-10"></span>
+                    </div>
+                    <div class="col-span-4"></div>
+                    <!-- Event 5 (right) -->
+                    <div class="col-span-4"></div>
+                    <div class="col-span-1 flex justify-center items-center">
+                        <span class="w-5 h-5 bg-purple-400 border-4 border-white rounded-full z-10"></span>
+                    </div>
+                    <div class="col-span-4 text-left pl-4 flex flex-col items-start">
+                        <div class="bg-white rounded-xl shadow p-4 w-full max-w-xs">
+                            <div class="flex items-center mb-2">
+                                <h4 class="text-lg font-bold text-blue-800">September 1–30, 2025</h4>
+                                <span class="inline-block w-4 h-4 bg-purple-400 rounded-full ml-2"></span>
+                            </div>
+                            <p class="text-gray-700">IMSO Preparation Camp</p>
+                        </div>
+                    </div>
+                    <!-- Event: IMSO Team Registration (left) -->
+                    <div class="col-span-4 text-right pr-4 flex flex-col items-end">
+                        <div class="bg-white rounded-xl shadow p-4 w-full max-w-xs">
+                            <div class="flex items-center justify-end mb-2">
+                                <span class="inline-block w-4 h-4 bg-orange-400 rounded-full mr-2"></span>
+                                <h4 class="text-lg font-bold text-blue-800">September 1, 2025</h4>
+                            </div>
+                            <p class="text-gray-700">IMSO Team Registration</p>
+                        </div>
+                    </div>
+                    <div class="col-span-1 flex justify-center items-center">
+                        <span class="w-5 h-5 bg-orange-400 border-4 border-white rounded-full z-10"></span>
+                    </div>
+                    <div class="col-span-4"></div>
+                    <!-- Event 6 (right) -->
+                    <div class="col-span-4"></div>
+                    <div class="col-span-1 flex justify-center items-center">
+                        <span class="w-5 h-5 bg-orange-400 border-4 border-white rounded-full z-10"></span>
+                    </div>
+                    <div class="col-span-4 text-left pl-4 flex flex-col items-start">
+                        <div class="bg-white rounded-xl shadow p-4 w-full max-w-xs">
+                            <div class="flex items-center mb-2">
+                                <h4 class="text-lg font-bold text-blue-800">October 1, 2025</h4>
+                                <span class="inline-block w-4 h-4 bg-orange-400 rounded-full ml-2"></span>
+                            </div>
+                            <p class="text-gray-700">Press Conference</p>
+                        </div>
+                    </div>
+                    <!-- Event 7 (left) -->
+                    <div class="col-span-4 text-right pr-4 flex flex-col items-end">
+                        <div class="bg-white rounded-xl shadow p-4 w-full max-w-xs">
+                            <div class="flex items-center justify-end mb-2">
+                                <span class="inline-block w-4 h-4 bg-blue-900 rounded-full mr-2"></span>
+                                <h4 class="text-lg font-bold text-blue-800">October 4–10, 2025</h4>
+                            </div>
+                            <p class="text-gray-700">22nd IMSO in Kedah, Malaysia</p>
+                        </div>
+                    </div>
+                    <div class="col-span-1 flex justify-center items-center">
+                        <span class="w-5 h-5 bg-blue-900 border-4 border-white rounded-full z-10"></span>
+                    </div>
+                    <div class="col-span-4"></div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-blue-800 via-blue-900 to-green-800 text-white py-8 mt-8 shadow-inner">
+        <div class="max-w-5xl mx-auto flex flex-col items-center justify-center px-6 gap-4 text-center">
+            <div class="flex flex-col items-center gap-3">
+
+                <div>
+                    <p class="font-bold text-lg tracking-wide">Bangladesh Mathematics & Science Olympiad</p>
+                    <p class="text-sm text-blue-100">&copy; 2025 BdMSO | Powered by <span
+                            class="font-semibold text-yellow-300">BdOSN</span> & <span
+                            class="font-semibold text-green-300">SPSB</span></p>
+                    <p class="text-sm">
+                        Developed by
+                        <a href="https://boylar.com" target="_blank"
+                            class="text-yellow-300 font-semibold hover:underline">Mosaraf Hossain Tipu</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
